@@ -36,11 +36,10 @@ addNewTaskBtn.addEventListener("click", function () {
       li.appendChild(applyBtn);
       li.appendChild(deleteBtn);
     });
-    //dodawanie elementów do li
+    taskList.appendChild(li);
     li.appendChild(liValue);
     li.appendChild(editBtn);
     li.appendChild(deleteBtn);
-    //tworzenie li zawierającego powyższe elementy:
-    taskList.appendChild(li);
   } else alert("Nazwa zadania nie może być pusta.");
 });
+//nie wiem jak zrobic aby działał enter w formularzach, gdy opakowuje input i button w form to enter działa ale nowe li po chwili znikaja tak jakby strona sie przeładowywała :(
