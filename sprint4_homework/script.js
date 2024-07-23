@@ -11,8 +11,8 @@ addNewTaskBtn.addEventListener("click", function () {
     //funkcja do tworzenia przycisków - przyjmuje nazwe oraz fukcje
     function createBtn(btnName, btnFunction) {
       const button = document.createElement("button");
-      button.addEventListener("click", btnFunction);
       button.textContent = btnName;
+      button.addEventListener("click", btnFunction);
       return button;
     }
     const deleteBtn = createBtn("Usuń", function () {
