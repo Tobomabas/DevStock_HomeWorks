@@ -36,7 +36,7 @@ addNewTaskBtn.addEventListener("click", function () {
       li.appendChild(applyBtn);
       li.appendChild(deleteBtn);
     });
-    //dodawanie elementów do li:d
+    //dodawanie elementów do li
     li.appendChild(liValue);
     li.appendChild(editBtn);
     li.appendChild(deleteBtn);
