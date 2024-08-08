@@ -47,12 +47,14 @@ const makeNickName = persons.map((person) => {
     };
   } else return { firstname: person.firstName, lastName: person.lastName };
 });
-console.log("Zad1:");
 
-console.log(makeNickName);
-console.log("Zad2:");
-const zad2 = makeNickName
-  .filter(({ nickName }) => nickName)
+console.log("zad1: ", makeNickName);
+
+//Zadanie 2:
+const personsWithAge = makeNickName
+  .filter(function (person) {
+    return person.nickName;
+  })
   .map((person, index) => {
     const firstNameLength = person.firstName.length;
     const lastNameLength = person.lastName.length;
@@ -73,11 +75,10 @@ const zad2 = makeNickName
       Age: myAge,
     };
   });
-console.log(zad2);
+console.log("zad2: ", personsWithAge);
 
 //zadanie 3:
-console.log("Zad3:");
-const findMostCommonLetter = zad2.map((person) => {
+const findMostCommonLetter = personsWithAge.map((person) => {
   const concatedPersValues =
     person.firstName.toLocaleLowerCase() +
     person.lastName.toLocaleLowerCase() +
@@ -109,4 +110,4 @@ const findMostCommonLetter = zad2.map((person) => {
     mostCommonLetter: { letter: mostFrequentLetter, count: highestCount },
   };
 });
-console.log(findMostCommonLetter);
+console.log("zad3: ", findMostCommonLetter);
