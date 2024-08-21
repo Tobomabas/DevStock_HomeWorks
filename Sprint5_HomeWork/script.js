@@ -25,7 +25,6 @@ const persons = [
     lastName: null,
   },
 ];
-
 //Zadanie 1:
 const makeNickName = persons.map((person) => {
   if (
@@ -49,17 +48,16 @@ const makeNickName = persons.map((person) => {
 });
 
 console.log("zad1: ", makeNickName);
-
 //Zadanie 2:
 const personsWithAge = makeNickName
-  .filter(function (person) {
+  .filter((person) => {
     return person.nickName;
   })
   .map((person, index) => {
     const firstNameLength = person.firstName.length;
     const lastNameLength = person.lastName.length;
     const sumName = lastNameLength + firstNameLength;
-    let myAge = null;
+    let myAge;
     if (sumName % 2 === 0) {
       myAge = sumName;
     } else {
@@ -72,11 +70,10 @@ const personsWithAge = makeNickName
       firstName: person.firstName,
       lastName: person.lastName,
       nickName: person.nickName,
-      Age: myAge,
+      age: myAge,
     };
   });
 console.log("zad2: ", personsWithAge);
-
 //zadanie 3:
 const findMostCommonLetter = personsWithAge.map((person) => {
   const concatedPersValues =
